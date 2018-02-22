@@ -7,9 +7,9 @@ passwd = 'root'
 database = 'music'
 table = 'music'
 music = $1
-music = awk -F '/' 'print{$4}'
+fullName = awk -F '/' 'print{$NF}'
 music = awk -F '-' 'print{$1}'
-music = awk -F '-' 'print{$2}'
+singer = awk -F '-' 'print{$2}'
 sql = 'SELECT COUNT(1) FROM MUSIC WHERE MUSIC'
 #get mysql connect 
 #insert one record into database
