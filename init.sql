@@ -1,9 +1,9 @@
 -- 建库
-CREATE DATABASE MUSIC;
--- 建ALBUM表
-CREATE TABLE MUSIC (ID VARCHAR(32),
-    ALBUM VARCHAR(128),
-    SINGER VARCHAR(64),
-    TIMESTAMP LONG,
-    DURATION LONG
+create database music;
+-- 建album表
+create table music (id varchar(32),
+    album varchar(128),
+    singer varchar(64),
+    timestamp long,
+    duration long
 )
