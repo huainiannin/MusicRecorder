@@ -33,11 +33,13 @@ while [ 1 ];do
 	if [ $isFirst -ne 0 ];then
         sql="insert into music values ('${begin}','${album}','${singer}','${begin}','${duration}')"
 		echo ----您已听歌${duration}秒,准备执行插入操作----
+        echo $sql
 		isFirst=0
         mysql -h${host} -P${port} -u${user} -p${passwd} -D${database} -e "${sql}"
 	else
         sql="update music set duration = '${duration}' where id = '${begin}'"
 		echo ----您已听歌${duration}秒，准备执行更新操作----
+        echo $sql
         mysql -h${host} -P${port} -u${user} -p${passwd} -D${database} -e "${sql}"
 	fi
 	#每隔120s轮询一次
