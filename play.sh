@@ -25,6 +25,9 @@ while [ 1 ];do
 	count=`ps -ef | grep 'mplayer' | wc -l`
 	#如果进程都没了，就退出
 	if [ $count -eq 0 ]; then
+        #数据备份
+         sql='mysqldump -uroot -p music > /home/qujt/program/MusicRecorder/data.sql'
+         $sql
 		 echo 'exit';
 		 exit;
 	fi
